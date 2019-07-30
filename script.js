@@ -10,9 +10,13 @@ for(i=0;i<n;i++){
 		box.appendChild(container);
 	}
 }
-var grid = document.querySelector('.container');
-console.log(grid)
-grid.addEventListener('mouseover', function( event ) {   
-	// highlight the mouseover target
-	event.target.style.color = "orange";
-});
+// var grid = document.querySelector('.container');
+// console.log(grid) because multiple class of same name doesnt work
+var inputs = document.getElementsByClassName('container');
+for( var i=0; i<inputs.length; i++){
+   inputs[i].addEventListener('mouseover', function( event ) {   
+		// highlight the mouseover target
+		event.target.style.backgroundColor = "orange";
+	});
+}
+
